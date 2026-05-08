@@ -1,0 +1,83 @@
+[
+  {
+    "screenId": "c4fd19320f024c15841ab1f413e2ff27",
+    "title": "Get Started - Empty State",
+    "componentName": "GetStartedEmptyState",
+    "file": "src/screens/GetStartedEmptyState.tsx",
+    "buttons": 6,
+    "inputs": 1,
+    "links": 7
+  },
+  {
+    "screenId": "1c6bc098db7e4c30b853ea4882a940d1",
+    "title": "Operator Profile Panel",
+    "componentName": "OperatorProfilePanel",
+    "file": "src/screens/OperatorProfilePanel.tsx",
+    "buttons": 5,
+    "inputs": 0,
+    "links": 0
+  },
+  {
+    "screenId": "c47223485d59487ab9fb1078042ad828",
+    "title": "Operational Dashboard",
+    "componentName": "OperationalDashboard",
+    "file": "src/screens/OperationalDashboard.tsx",
+    "buttons": 13,
+    "inputs": 0,
+    "links": 7
+  },
+  {
+    "screenId": "ac717a5ab8da48c2850e561db5b4eea9",
+    "title": "System Storage Error",
+    "componentName": "SystemStorageError",
+    "file": "src/screens/SystemStorageError.tsx",
+    "buttons": 2,
+    "inputs": 0,
+    "links": 0
+  },
+  {
+    "screenId": "dc353e2fcf374dd381b2eeeaeb77287a",
+    "title": "System Settings",
+    "componentName": "SystemSettings",
+    "file": "src/screens/SystemSettings.tsx",
+    "buttons": 10,
+    "inputs": 2,
+    "links": 7
+  },
+  {
+    "screenId": "e938f913f7e640d6b72f51ab29fbb5bf",
+    "title": "Maintenance Activity Log",
+    "componentName": "MaintenanceActivityLog",
+    "file": "src/screens/MaintenanceActivityLog.tsx",
+    "buttons": 8,
+    "inputs": 2,
+    "links": 7
+  },
+  {
+    "screenId": "02534f53a8c44faca57e376dcca4d7a4",
+    "title": "Operational Filters",
+    "componentName": "OperationalFilters",
+    "file": "src/screens/OperationalFilters.tsx",
+    "buttons": 17,
+    "inputs": 5,
+    "links": 7
+  },
+  {
+    "screenId": "3dff972a5bf742f299d21bbe3d7824f0",
+    "title": "Equipment Health Status",
+    "componentName": "EquipmentHealthStatus",
+    "file": "src/screens/EquipmentHealthStatus.tsx",
+    "buttons": 11,
+    "inputs": 1,
+    "links": 7
+  },
+  {
+    "screenId": "c9ba2566c36f4c26b2429af0621c2438",
+    "title": "Task Maintenance Board",
+    "componentName": "TaskMaintenanceBoard",
+    "file": "src/screens/TaskMaintenanceBoard.tsx",
+    "buttons": 10,
+    "inputs": 1,
+    "links": 7
+  }
+]
