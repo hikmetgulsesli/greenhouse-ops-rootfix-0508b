@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FloraControl Console - Maintenance Log</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#3c4a5e",
+                        "outline": "#8d90a0",
+                        "tertiary-fixed": "#ffdbcd",
+                        "primary": "#b4c5ff",
+                        "surface-container-low": "#191b23",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-surface": "#e1e2ed",
+                        "surface-tint": "#b4c5ff",
+                        "surface-dim": "#11131b",
+                        "on-secondary": "#233144",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-primary-fixed": "#00174b",
+                        "secondary": "#b9c7df",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#2e3039",
+                        "surface-container-highest": "#32343d",
+                        "on-background": "#e1e2ed",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "on-tertiary": "#581e00",
+                        "surface-variant": "#32343d",
+                        "background": "#11131b",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "primary-container": "#2563eb",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "tertiary": "#ffb596",
+                        "outline-variant": "#434655",
+                        "surface": "#11131b",
+                        "inverse-surface": "#e1e2ed",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-tertiary-container": "#ffede6",
+                        "on-surface-variant": "#c3c6d7",
+                        "on-primary-container": "#eeefff",
+                        "secondary-fixed": "#d5e3fc",
+                        "surface-container": "#1d1f27",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-bright": "#373942",
+                        "on-error": "#690005",
+                        "tertiary-container": "#bc4800",
+                        "primary-fixed": "#dbe1ff",
+                        "on-secondary-container": "#abb9d1",
+                        "inverse-primary": "#0053db",
+                        "surface-container-lowest": "#0c0e16",
+                        "surface-container-high": "#282a32",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "on-primary": "#002a78"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin": "24px",
+                        "gutter": "16px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "display": ["Inter"],
+                        "mono-data": ["monospace"],
+                        "body-sm": ["Inter"],
+                        "body-xs": ["Inter"],
+                        "heading-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "mono-data": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-xs": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "heading-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col md:flex-row">
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden md:flex flex-col h-screen left-0 w-64 z-50 bg-surface-container py-lg px-md space-y-sm bg-surface-container-low border-r border-outline-variant">
+<div class="mb-lg px-sm">
+<h1 class="font-display text-display text-primary">FloraControl</h1>
+<p class="font-body-xs text-body-xs text-on-surface-variant mt-xs">Sector 04-B Primary Greenhouse</p>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-heading-md text-heading-md py-sm rounded-xl mb-lg hover:bg-primary transition-colors flex justify-center items-center gap-sm">
+<span class="material-symbols-outlined text-[20px]">add</span>
+            New Log Entry
+        </button>
+<div class="flex-1 space-y-unit">
+<a class="flex items-center gap-md px-sm py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest rounded-xl transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-sm text-body-sm">Overview</span>
+</a>
+<a class="flex items-center gap-md px-sm py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest rounded-xl transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-body-sm text-body-sm">Maintenance Board</span>
+</a>
+<a class="flex items-center gap-md px-sm py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest rounded-xl transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span class="font-body-sm text-body-sm">System Health</span>
+</a>
+<a class="flex items-center gap-md px-sm py-sm bg-secondary-container text-on-secondary-container rounded-xl font-bold transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-body-sm text-body-sm">Activity Logs</span>
+</a>
+<a class="flex items-center gap-md px-sm py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest rounded-xl transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">tune</span>
+<span class="font-body-sm text-body-sm">Operational Config</span>
+</a>
+</div>
+<div class="mt-auto pt-md space-y-unit border-t border-outline-variant">
+<a class="flex items-center gap-md px-sm py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest rounded-xl transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-body-sm text-body-sm">Support</span>
+</a>
+<a class="flex items-center gap-md px-sm py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest rounded-xl transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-sm text-body-sm">Settings</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col min-h-screen bg-background">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-margin h-16 bg-surface-dim border-b border-outline-variant z-40 sticky top-0">
+<div class="flex items-center gap-md w-1/3">
+<div class="relative w-full max-w-md hidden md:block">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-full py-xs pl-xl pr-sm font-body-sm text-body-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-on-surface-variant" placeholder="Search logs..." type="text"/>
+</div>
+</div>
+<div class="md:hidden">
+<h1 class="font-display text-heading-md font-bold text-on-surface">FloraControl Console</h1>
+</div>
+<div class="flex items-center gap-sm justify-end w-1/3">
+<button class="p-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest rounded-full transition-colors cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest rounded-full transition-colors cursor-pointer active:opacity-80 hidden md:block">
+<span class="material-symbols-outlined">help</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest rounded-full transition-colors cursor-pointer active:opacity-80 hidden md:block">
+<span class="material-symbols-outlined">apps</span>
+</button>
+<button class="ml-sm px-sm py-xs border border-error text-error font-body-sm text-body-sm rounded-lg hover:bg-error/10 transition-colors hidden sm:block">
+                    Emergency Stop
+                </button>
+<div class="ml-sm w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img alt="Operator Profile Avatar" class="w-full h-full object-cover" data-alt="A close up portrait of a corporate operator wearing a headset in a low light command center. Dark moody tech vibe. Professional minimalist aesthetic. Cool blue lighting. Clean composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt4aekSPUfrS0b-As09q4aasIP1lRP0LWnYpoeZysiGMi3jsOVorFOajePKwmnyy2SQ6AFC3RbhWClenTrwKqXcFYC44TMh9PECqTBuiVDtfVxQ46mmRNNA0dTzMyLsu_E3eW47Yp0IRxmtil7RRbZedWXPL3kkWknJhe-R8hEja801hv3DbOFase3PF8SZebZPI3XHXTkoaxEYTjBfW_AS_B4Muq3Frxm_0zotfrcfZ71bGrduGUTT7BseUevdZsCEZHzvtx6Im1u"/>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 p-margin overflow-auto">
+<div class="max-w-7xl mx-auto space-y-lg">
+<!-- Header & Filters -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-md">
+<div>
+<h2 class="font-display text-display text-on-surface">Maintenance Log</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Chronological history of all sector activity</p>
+</div>
+<div class="flex items-center gap-sm">
+<div class="flex items-center bg-surface-container border border-outline-variant rounded-lg p-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] ml-xs">calendar_today</span>
+<input class="bg-transparent border-none focus:ring-0 font-body-sm text-body-sm text-on-surface w-32 px-sm py-0 outline-none" readonly="" type="text" value="Oct 12 - Oct 19"/>
+</div>
+<button class="flex items-center gap-xs px-sm py-xs bg-surface-container border border-outline-variant rounded-lg text-on-surface font-body-sm text-body-sm hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                            Filter
+                        </button>
+</div>
+</div>
+<!-- Log Table -->
+<div class="bg-surface border border-outline-variant rounded-xl overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container border-b border-outline-variant">
+<th class="py-sm px-md font-label-caps text-label-caps text-on-surface-variant uppercase">Timestamp</th>
+<th class="py-sm px-md font-label-caps text-label-caps text-on-surface-variant uppercase">Equipment</th>
+<th class="py-sm px-md font-label-caps text-label-caps text-on-surface-variant uppercase">Action Taken</th>
+<th class="py-sm px-md font-label-caps text-label-caps text-on-surface-variant uppercase">Operator</th>
+<th class="py-sm px-md font-label-caps text-label-caps text-on-surface-variant uppercase">Status</th>
+</tr>
+</thead>
+<tbody class="font-mono-data text-mono-data">
+<tr class="border-b border-outline-variant/50 hover:bg-surface-container-highest/50 transition-colors">
+<td class="py-md px-md text-on-surface-variant">2023-10-19 14:32:11</td>
+<td class="py-md px-md text-on-surface">Irrigation Valve A4</td>
+<td class="py-md px-md text-on-surface-variant">Manual override closed; pressure test initiated.</td>
+<td class="py-md px-md text-on-surface-variant">J. Doe</td>
+<td class="py-md px-md">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface-container-low border border-outline-variant text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                                            Testing
+                                        </span>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/50 hover:bg-surface-container-highest/50 transition-colors">
+<td class="py-md px-md text-on-surface-variant">2023-10-19 11:15:00</td>
+<td class="py-md px-md text-on-surface">HVAC Unit 02</td>
+<td class="py-md px-md text-on-surface-variant">Replaced air filter; cleared condensation line.</td>
+<td class="py-md px-md text-on-surface-variant">S. Smith</td>
+<td class="py-md px-md">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface-container-low border border-outline-variant text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                                            Complete
+                                        </span>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/50 hover:bg-surface-container-highest/50 transition-colors bg-error-container/10">
+<td class="py-md px-md text-on-surface-variant">2023-10-18 22:45:33</td>
+<td class="py-md px-md text-on-surface">Sensor Array B-12</td>
+<td class="py-md px-md text-on-surface-variant">Automated calibration failed. Requires physical inspection.</td>
+<td class="py-md px-md text-on-surface-variant">System</td>
+<td class="py-md px-md">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-error-container border border-error/30 text-on-error-container">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                                            Failed
+                                        </span>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/50 hover:bg-surface-container-highest/50 transition-colors">
+<td class="py-md px-md text-on-surface-variant">2023-10-18 09:00:00</td>
+<td class="py-md px-md text-on-surface">Nutrient Mixer Tank</td>
+<td class="py-md px-md text-on-surface-variant">Scheduled weekly flush and recalibration.</td>
+<td class="py-md px-md text-on-surface-variant">A. Wong</td>
+<td class="py-md px-md">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface-container-low border border-outline-variant text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                                            Complete
+                                        </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="bg-surface-container p-sm border-t border-outline-variant flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-sm">Showing 1 to 4 of 128 entries</span>
+<div class="flex items-center gap-sm">
+<button class="p-xs text-on-surface-variant hover:text-on-surface disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-xs text-on-surface hover:bg-surface-container-highest rounded">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

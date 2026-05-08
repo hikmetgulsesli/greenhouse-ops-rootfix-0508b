@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Empty State - FloraControl Console</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#3c4a5e",
+                      "outline": "#8d90a0",
+                      "tertiary-fixed": "#ffdbcd",
+                      "primary": "#b4c5ff",
+                      "surface-container-low": "#191b23",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-surface": "#e1e2ed",
+                      "surface-tint": "#b4c5ff",
+                      "surface-dim": "#11131b",
+                      "on-secondary": "#233144",
+                      "on-tertiary-fixed": "#360f00",
+                      "on-primary-fixed": "#00174b",
+                      "secondary": "#b9c7df",
+                      "on-error-container": "#ffdad6",
+                      "error-container": "#93000a",
+                      "inverse-on-surface": "#2e3039",
+                      "surface-container-highest": "#32343d",
+                      "on-background": "#e1e2ed",
+                      "secondary-fixed-dim": "#b9c7df",
+                      "on-tertiary": "#581e00",
+                      "surface-variant": "#32343d",
+                      "background": "#11131b",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "primary-container": "#2563eb",
+                      "on-secondary-fixed-variant": "#3a485b",
+                      "tertiary": "#ffb596",
+                      "outline-variant": "#434655",
+                      "surface": "#11131b",
+                      "inverse-surface": "#e1e2ed",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "on-tertiary-container": "#ffede6",
+                      "on-surface-variant": "#c3c6d7",
+                      "on-primary-container": "#eeefff",
+                      "secondary-fixed": "#d5e3fc",
+                      "surface-container": "#1d1f27",
+                      "error": "#ffb4ab",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "surface-bright": "#373942",
+                      "on-error": "#690005",
+                      "tertiary-container": "#bc4800",
+                      "primary-fixed": "#dbe1ff",
+                      "on-secondary-container": "#abb9d1",
+                      "inverse-primary": "#0053db",
+                      "surface-container-lowest": "#0c0e16",
+                      "surface-container-high": "#282a32",
+                      "on-secondary-fixed": "#0d1c2e",
+                      "on-primary": "#002a78"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin": "24px",
+                      "gutter": "16px",
+                      "unit": "4px",
+                      "sm": "8px",
+                      "md": "16px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "xl": "32px"
+              },
+              "fontFamily": {
+                      "display": [
+                              "Inter"
+                      ],
+                      "mono-data": [
+                              "monospace"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "body-xs": [
+                              "Inter"
+                      ],
+                      "heading-md": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "mono-data": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-xs": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "heading-md": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "11px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-sm flex h-screen overflow-hidden">
+<!-- SideNavBar (Hidden on Mobile, Visible on Web) -->
+<nav class="hidden md:flex flex-col h-full py-lg px-md space-y-sm bg-surface-container dark:bg-surface-container docked h-screen left-0 w-64 z-50 bg-surface-container-low dark:bg-surface-container-low border-r border-outline-variant">
+<div class="mb-lg px-md">
+<h1 class="font-display text-heading-md font-bold text-primary">FloraControl Console</h1>
+</div>
+<div class="flex items-center space-x-md mb-lg px-md py-sm bg-surface-container-highest rounded-xl">
+<img alt="Greenhouse Sector Logo" class="w-10 h-10 rounded-full border border-outline-variant object-cover" data-alt="A macro shot of a single green leaf with dew drops, highly detailed, dramatic lighting, symbolizing organic growth in a high-tech greenhouse environment. Focus on texture and deep green tones. Minimalist and corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG_yioZTqH4Yais1ir3xB9MpVcB0wtKamh6xooHI1Z70jW-yPJF6XDGI_Idhtq_d5Plf6VO0MkE-UNYp7Lar0_48jKg9lXFmhafxj0K1lCtJtohpNP97ZwGQeALm4Sau3qDMIMhujQq4BORnl7WSk7b3B2tVMXZBWuklhLXC7Qxg7pxvV9fAwoFsxt2nzo1fBcf_rRDDk0zVn9O7q1vl8xnPlUV8fl3_KNJdT_ZppJSYHCIw5W0t92f1W8jMCVtYkwqxa2RZFuPIgh"/>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface">Sector 04-B</p>
+<p class="font-body-xs text-body-xs text-on-surface-variant">Primary Greenhouse</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-body-sm text-body-sm py-sm rounded-lg mb-lg hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-colors duration-200 flex items-center justify-center space-x-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>New Log Entry</span>
+</button>
+<div class="flex-1 space-y-unit">
+<a class="flex items-center space-x-md px-md py-sm rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-sm text-body-sm">Overview</span>
+</a>
+<a class="flex items-center space-x-md px-md py-sm bg-secondary-container text-on-secondary-container rounded-xl font-bold hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">assignment</span>
+<span class="font-body-sm text-body-sm">Maintenance Board</span>
+</a>
+<a class="flex items-center space-x-md px-md py-sm rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span class="font-body-sm text-body-sm">System Health</span>
+</a>
+<a class="flex items-center space-x-md px-md py-sm rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-body-sm text-body-sm">Activity Logs</span>
+</a>
+<a class="flex items-center space-x-md px-md py-sm rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">tune</span>
+<span class="font-body-sm text-body-sm">Operational Config</span>
+</a>
+</div>
+<div class="mt-auto pt-lg border-t border-outline-variant space-y-unit">
+<a class="flex items-center space-x-md px-md py-sm rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-body-sm text-body-sm">Support</span>
+</a>
+<a class="flex items-center space-x-md px-md py-sm rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-all scale-98 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-sm text-body-sm">Settings</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col h-full overflow-hidden">
+<!-- TopNavBar (Visible on Mobile and Web) -->
+<header class="flex justify-between items-center w-full px-margin h-16 bg-surface-dim dark:bg-surface-dim docked full-width top-0 z-40 border-b border-outline-variant dark:border-outline-variant flat no shadows">
+<div class="flex items-center md:hidden">
+<span class="font-display text-heading-md font-bold text-on-surface dark:text-on-surface">FloraControl Console</span>
+</div>
+<div class="hidden md:flex items-center space-x-md flex-1">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-sm top-1/2 transform -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface-container-highest border border-outline-variant rounded-lg pl-xl pr-sm py-sm text-body-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all placeholder-on-surface-variant" placeholder="Search logs, systems..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-gutter">
+<button class="text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-colors duration-200 p-sm rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-colors duration-200 p-sm rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">help</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-colors duration-200 p-sm rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">apps</span>
+</button>
+<div class="h-6 w-px bg-outline-variant mx-sm"></div>
+<button class="text-error font-body-sm text-body-sm border border-error rounded-lg px-sm py-xs hover:bg-error-container hover:text-on-error-container transition-colors duration-200">
+                    Emergency Stop
+                </button>
+<img alt="Operator Profile Avatar" class="w-8 h-8 rounded-full border border-outline-variant cursor-pointer" data-alt="A professional headshot of an agricultural technology operator. Neutral expression, corporate lighting. The background is a slightly blurred, high-tech control room environment with subtle blue and dark grey tones matching the UI aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDMNcLz6eI5NdKSlk-CVhexeVq5VCdeU1J9t1gGFdGWS7cgbItPpZzu-tEmflkifmmH6DNvYcBgvBeEN6lMUURLm8Qs_QaKJ3yj0qoRI9tVz-HJ5ONDR0S9y0dBNqDM_gh1nHeLIhCGyRbsIjgC8-nlc_qnCwRCQLKYS7CC3x7NkdIZFuCLQg9jrYaOcC5UznHjCEbY1FuxPxKCJvcN4O-rOZdeKfjmHZejpMIni21TMKJKL6tNG7EOA_R6BIDcU0t-iDAB6JGoukI"/>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 overflow-y-auto p-margin flex items-center justify-center">
+<div class="max-w-md w-full bg-surface rounded-xl border border-outline-variant p-xl flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-container-highest rounded-full flex items-center justify-center mb-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[40px]">add_circle</span>
+</div>
+<h2 class="font-display text-heading-md text-on-surface mb-sm">No Maintenance Tasks Found</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-xl max-w-sm">
+                    There are currently no active logs or tasks for Sector 04-B. Begin by creating a new maintenance plan or logging an immediate action.
+                </p>
+<button class="bg-primary-container text-on-primary-container font-body-sm text-body-sm px-lg py-md rounded-lg hover:bg-primary hover:text-on-primary transition-colors duration-200 flex items-center space-x-sm w-full justify-center">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Create First Task</span>
+</button>
+</div>
+</main>
+</div>
+</body></html>
